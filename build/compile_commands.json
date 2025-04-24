@@ -1,19 +1,31 @@
 [
 {
   "directory": "/home/lth/learn/MyRPC/build/src",
-  "command": "/usr/bin/g++ -DNOMINMAX -Dmprpc_EXPORTS -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -fPIC -o CMakeFiles/mprpc.dir/mprpcapplication.cpp.o -c /home/lth/learn/MyRPC/src/mprpcapplication.cpp",
+  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/mprpcapplication.cpp.o -c /home/lth/learn/MyRPC/src/mprpcapplication.cpp",
   "file": "/home/lth/learn/MyRPC/src/mprpcapplication.cpp",
   "output": "src/CMakeFiles/mprpc.dir/mprpcapplication.cpp.o"
 },
 {
   "directory": "/home/lth/learn/MyRPC/build/src",
-  "command": "/usr/bin/g++ -DNOMINMAX -Dmprpc_EXPORTS -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -fPIC -o CMakeFiles/mprpc.dir/mprpcconfig.cpp.o -c /home/lth/learn/MyRPC/src/mprpcconfig.cpp",
+  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/mprpcchannel.cpp.o -c /home/lth/learn/MyRPC/src/mprpcchannel.cpp",
+  "file": "/home/lth/learn/MyRPC/src/mprpcchannel.cpp",
+  "output": "src/CMakeFiles/mprpc.dir/mprpcchannel.cpp.o"
+},
+{
+  "directory": "/home/lth/learn/MyRPC/build/src",
+  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/mprpcconfig.cpp.o -c /home/lth/learn/MyRPC/src/mprpcconfig.cpp",
   "file": "/home/lth/learn/MyRPC/src/mprpcconfig.cpp",
   "output": "src/CMakeFiles/mprpc.dir/mprpcconfig.cpp.o"
 },
 {
   "directory": "/home/lth/learn/MyRPC/build/src",
-  "command": "/usr/bin/g++ -DNOMINMAX -Dmprpc_EXPORTS -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -fPIC -o CMakeFiles/mprpc.dir/rpcprovider.cpp.o -c /home/lth/learn/MyRPC/src/rpcprovider.cpp",
+  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/rpcheader.pb.cc.o -c /home/lth/learn/MyRPC/src/rpcheader.pb.cc",
+  "file": "/home/lth/learn/MyRPC/src/rpcheader.pb.cc",
+  "output": "src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o"
+},
+{
+  "directory": "/home/lth/learn/MyRPC/build/src",
+  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/rpcprovider.cpp.o -c /home/lth/learn/MyRPC/src/rpcprovider.cpp",
   "file": "/home/lth/learn/MyRPC/src/rpcprovider.cpp",
   "output": "src/CMakeFiles/mprpc.dir/rpcprovider.cpp.o"
 },
@@ -28,5 +40,17 @@
   "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/provider.dir/__/user.pb.cc.o -c /home/lth/learn/MyRPC/example/user.pb.cc",
   "file": "/home/lth/learn/MyRPC/example/user.pb.cc",
   "output": "example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o"
+},
+{
+  "directory": "/home/lth/learn/MyRPC/build/example/caller",
+  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/consumer.dir/calluserservice.cc.o -c /home/lth/learn/MyRPC/example/caller/calluserservice.cc",
+  "file": "/home/lth/learn/MyRPC/example/caller/calluserservice.cc",
+  "output": "example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o"
+},
+{
+  "directory": "/home/lth/learn/MyRPC/build/example/caller",
+  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/consumer.dir/__/user.pb.cc.o -c /home/lth/learn/MyRPC/example/user.pb.cc",
+  "file": "/home/lth/learn/MyRPC/example/user.pb.cc",
+  "output": "example/caller/CMakeFiles/consumer.dir/__/user.pb.cc.o"
 }
 ]

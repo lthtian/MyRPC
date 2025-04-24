@@ -1,1 +1,2 @@
-/usr/bin/g++ -fPIC -g -shared -Wl,-soname,libmprpc.so -o /home/lth/learn/MyRPC/lib/libmprpc.so CMakeFiles/mprpc.dir/mprpcapplication.cpp.o CMakeFiles/mprpc.dir/mprpcconfig.cpp.o CMakeFiles/mprpc.dir/rpcprovider.cpp.o   -L/usr/local/lib  -L/home/lth/learn/MyRPC/lib  -Wl,-rpath,/usr/local/lib:/home/lth/learn/MyRPC/lib -lMyMuduo -lpthread 
+/usr/bin/ar qc /home/lth/learn/MyRPC/lib/libmprpc.a CMakeFiles/mprpc.dir/mprpcapplication.cpp.o CMakeFiles/mprpc.dir/mprpcchannel.cpp.o CMakeFiles/mprpc.dir/mprpcconfig.cpp.o CMakeFiles/mprpc.dir/rpcheader.pb.cc.o CMakeFiles/mprpc.dir/rpcprovider.cpp.o
+/usr/bin/ranlib /home/lth/learn/MyRPC/lib/libmprpc.a

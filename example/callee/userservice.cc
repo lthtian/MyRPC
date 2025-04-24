@@ -34,7 +34,7 @@ public:
         code->set_errmsg("");
         response->set_success(login_result);
 
-        // 执行回调操作
+        // 执行回调操作 直接执行响应对象数据的序列化和网络发送
         done->Run();
     }
 };

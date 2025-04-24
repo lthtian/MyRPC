@@ -5,6 +5,16 @@
 #include <mymuduo/EventLoop.h>
 #include <mymuduo/InetAddress.h>
 
+// #include <muduo/net/TcpServer.h>
+// #include <muduo/net/EventLoop.h>
+// #include <muduo/net/InetAddress.h>
+// using namespace muduo;
+// using namespace muduo::net;
+
+#include <functional>
+#include <google/protobuf/descriptor.h>
+#include <unordered_map>
+
 class RpcProvider
 {
 public:
@@ -18,7 +28,16 @@ public:
 private:
     void OnConnection(const TcpConnectionPtr &);
     void OnMessage(const TcpConnectionPtr &, Buffer *, Timestamp);
+    void SendRpcResponse(const TcpConnectionPtr &, google::protobuf::Message *);
 
     std::unique_ptr<TcpServer> m_tcpserverPtr;
     EventLoop m_eventLoop;
+
+    // service服务类型信息
+    struct ServiceInfo
+    {
+        google::protobuf::Service *m_service;
+        std::unordered_map<std::string, const google::protobuf::MethodDescriptor *> m_methodMap;
+    };
+    std::unordered_map<std::string, ServiceInfo> m_serviceMap;
 };

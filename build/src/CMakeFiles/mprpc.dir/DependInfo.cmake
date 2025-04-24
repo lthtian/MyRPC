@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lth/learn/MyRPC/src/mprpcapplication.cpp" "src/CMakeFiles/mprpc.dir/mprpcapplication.cpp.o" "gcc" "src/CMakeFiles/mprpc.dir/mprpcapplication.cpp.o.d"
+  "/home/lth/learn/MyRPC/src/mprpcchannel.cpp" "src/CMakeFiles/mprpc.dir/mprpcchannel.cpp.o" "gcc" "src/CMakeFiles/mprpc.dir/mprpcchannel.cpp.o.d"
   "/home/lth/learn/MyRPC/src/mprpcconfig.cpp" "src/CMakeFiles/mprpc.dir/mprpcconfig.cpp.o" "gcc" "src/CMakeFiles/mprpc.dir/mprpcconfig.cpp.o.d"
+  "/home/lth/learn/MyRPC/src/rpcheader.pb.cc" "src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o" "gcc" "src/CMakeFiles/mprpc.dir/rpcheader.pb.cc.o.d"
   "/home/lth/learn/MyRPC/src/rpcprovider.cpp" "src/CMakeFiles/mprpc.dir/rpcprovider.cpp.o" "gcc" "src/CMakeFiles/mprpc.dir/rpcprovider.cpp.o.d"
   )
 
