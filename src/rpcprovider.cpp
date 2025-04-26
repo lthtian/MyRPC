@@ -1,6 +1,7 @@
 #include "rpcprovider.h"
 #include "mprpcapplication.h"
 #include "rpcheader.pb.h"
+#include "zookeepercli.h"
 using std::cout;
 using std::endl;
 using std::string;
@@ -40,6 +41,23 @@ void RpcProvider::Run()
                                         std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
 
     server.setThreadNum(3);
+
+    // 把当前rpc节点要发布的所有服务都注册到zk上, 让客户端通过zk发现服务而不是ip/port
+    // 服务节点设置为永久, 方法节点设置为暂时, 只要rpc节点断开连接, 方法节点就会失效
+    ZkClient zkCli;
+    zkCli.start();
+    for (auto &[name, service_info] : m_serviceMap)
+    {
+        std::string service_path = "/" + name;
+        zkCli.create(service_path.c_str(), nullptr, 0);
+        for (auto &[method_name, ptr] : service_info.m_methodMap)
+        {
+            std::string method_path = service_path + "/" + method_name;
+            char method_data[129] = {0};
+            sprintf(method_data, "%s:%d", ip.c_str(), port);
+            zkCli.create(method_path.c_str(), method_data, strlen(method_data), ZOO_EPHEMERAL);
+        }
+    }
 
     cout << "RpcProvider start service at ip:" << ip << " port:" << port << endl;
 

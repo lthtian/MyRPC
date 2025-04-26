@@ -220,45 +220,6 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
-//The directory containing a CMake configuration file for Protobuf.
-Protobuf_DIR:PATH=/usr/local/lib/cmake/protobuf
-
-//Path to a file.
-Protobuf_INCLUDE_DIR:PATH=/usr/local/include
-
-//Path to a library.
-Protobuf_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libprotobuf.a
-
-//Path to a library.
-Protobuf_LIBRARY_RELEASE:FILEPATH=/usr/local/lib/libprotobuf.a
-
-//Path to a library.
-Protobuf_LITE_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libprotobuf-lite.a
-
-//Path to a library.
-Protobuf_LITE_LIBRARY_RELEASE:FILEPATH=/usr/local/lib/libprotobuf-lite.a
-
-//The Google Protocol Buffers Compiler
-Protobuf_PROTOC_EXECUTABLE:FILEPATH=/usr/local/bin/protoc
-
-//Path to a library.
-Protobuf_PROTOC_LIBRARY_DEBUG:FILEPATH=/usr/local/lib/libprotoc.a
-
-//Path to a library.
-Protobuf_PROTOC_LIBRARY_RELEASE:FILEPATH=/usr/local/lib/libprotoc.a
-
-//Path to a file.
-ZLIB_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a library.
-ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-ZLIB_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libz.so
-
-//The directory containing a CMake configuration file for absl.
-absl_DIR:PATH=/usr/local/lib/cmake/absl
-
 //Value Computed by CMake
 mprpc_BINARY_DIR:STATIC=/home/lth/learn/MyRPC/build
 
@@ -266,7 +227,7 @@ mprpc_BINARY_DIR:STATIC=/home/lth/learn/MyRPC/build
 mprpc_IS_TOP_LEVEL:STATIC=ON
 
 //Dependencies for the target
-mprpc_LIB_DEPENDS:STATIC=general;MyMuduo;general;pthread;
+mprpc_LIB_DEPENDS:STATIC=general;MyMuduo;general;pthread;general;zookeeper_mt;
 
 //Value Computed by CMake
 mprpc_SOURCE_DIR:STATIC=/home/lth/learn/MyRPC
@@ -526,15 +487,6 @@ pkgcfg_lib_PROTOBUF_utf8_range:FILEPATH=/usr/local/lib/libutf8_range.a
 //Path to a library.
 pkgcfg_lib_PROTOBUF_utf8_validity:FILEPATH=/usr/local/lib/libutf8_validity.a
 
-//CMake built-in FindProtobuf.cmake module compatible
-protobuf_MODULE_COMPATIBLE:BOOL=OFF
-
-//Enable for verbose output
-protobuf_VERBOSE:BOOL=OFF
-
-//The directory containing a CMake configuration file for utf8_range.
-utf8_range_DIR:PATH=/usr/local/lib/cmake/utf8_range
-
 
 ########################
 # INTERNAL cache entries
@@ -616,8 +568,6 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
-//Test CMAKE_HAVE_LIBC_PTHREAD
-CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/lth/learn/MyRPC
@@ -687,12 +637,6 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v1.8.1()]
-//Details about finding Protobuf
-FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/usr/local/lib/libprotobuf.a][/usr/local/include][v6.31.0()]
-//Details about finding Threads
-FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
-//Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/usr/lib/x86_64-linux-gnu/libz.so][/usr/include][c ][v1.3()]
 //ADVANCED property for variable: PKG_CONFIG_ARGN
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
@@ -732,28 +676,6 @@ PROTOBUF_protobuf_INCLUDEDIR:INTERNAL=
 PROTOBUF_protobuf_LIBDIR:INTERNAL=
 PROTOBUF_protobuf_PREFIX:INTERNAL=
 PROTOBUF_protobuf_VERSION:INTERNAL=
-//ADVANCED property for variable: Protobuf_INCLUDE_DIR
-Protobuf_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_LIBRARY_DEBUG
-Protobuf_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_LIBRARY_RELEASE
-Protobuf_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_LITE_LIBRARY_DEBUG
-Protobuf_LITE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_LITE_LIBRARY_RELEASE
-Protobuf_LITE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_PROTOC_EXECUTABLE
-Protobuf_PROTOC_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_DEBUG
-Protobuf_PROTOC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Protobuf_PROTOC_LIBRARY_RELEASE
-Protobuf_PROTOC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: ZLIB_INCLUDE_DIR
-ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
-ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
-ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 __pkg_config_arguments_PROTOBUF:INTERNAL=REQUIRED;protobuf
@@ -929,8 +851,4 @@ pkgcfg_lib_PROTOBUF_utf8_range-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PROTOBUF_utf8_validity
 pkgcfg_lib_PROTOBUF_utf8_validity-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/usr/local/lib
-//ADVANCED property for variable: protobuf_MODULE_COMPATIBLE
-protobuf_MODULE_COMPATIBLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: protobuf_VERBOSE
-protobuf_VERBOSE-ADVANCED:INTERNAL=1
 

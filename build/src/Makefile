@@ -130,6 +130,30 @@ mprpc/fast:
 	cd /home/lth/learn/MyRPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/build
 .PHONY : mprpc/fast
 
+logger.o: logger.cpp.o
+.PHONY : logger.o
+
+# target to build an object file
+logger.cpp.o:
+	cd /home/lth/learn/MyRPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/logger.cpp.o
+.PHONY : logger.cpp.o
+
+logger.i: logger.cpp.i
+.PHONY : logger.i
+
+# target to preprocess a source file
+logger.cpp.i:
+	cd /home/lth/learn/MyRPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/logger.cpp.i
+.PHONY : logger.cpp.i
+
+logger.s: logger.cpp.s
+.PHONY : logger.s
+
+# target to generate assembly for a file
+logger.cpp.s:
+	cd /home/lth/learn/MyRPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/logger.cpp.s
+.PHONY : logger.cpp.s
+
 mprpcapplication.o: mprpcapplication.cpp.o
 .PHONY : mprpcapplication.o
 
@@ -202,6 +226,30 @@ mprpcconfig.cpp.s:
 	cd /home/lth/learn/MyRPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/mprpcconfig.cpp.s
 .PHONY : mprpcconfig.cpp.s
 
+mprpccontroller.o: mprpccontroller.cpp.o
+.PHONY : mprpccontroller.o
+
+# target to build an object file
+mprpccontroller.cpp.o:
+	cd /home/lth/learn/MyRPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/mprpccontroller.cpp.o
+.PHONY : mprpccontroller.cpp.o
+
+mprpccontroller.i: mprpccontroller.cpp.i
+.PHONY : mprpccontroller.i
+
+# target to preprocess a source file
+mprpccontroller.cpp.i:
+	cd /home/lth/learn/MyRPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/mprpccontroller.cpp.i
+.PHONY : mprpccontroller.cpp.i
+
+mprpccontroller.s: mprpccontroller.cpp.s
+.PHONY : mprpccontroller.s
+
+# target to generate assembly for a file
+mprpccontroller.cpp.s:
+	cd /home/lth/learn/MyRPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/mprpccontroller.cpp.s
+.PHONY : mprpccontroller.cpp.s
+
 rpcheader.pb.o: rpcheader.pb.cc.o
 .PHONY : rpcheader.pb.o
 
@@ -250,6 +298,30 @@ rpcprovider.cpp.s:
 	cd /home/lth/learn/MyRPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/rpcprovider.cpp.s
 .PHONY : rpcprovider.cpp.s
 
+zookeepercli.o: zookeepercli.cpp.o
+.PHONY : zookeepercli.o
+
+# target to build an object file
+zookeepercli.cpp.o:
+	cd /home/lth/learn/MyRPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/zookeepercli.cpp.o
+.PHONY : zookeepercli.cpp.o
+
+zookeepercli.i: zookeepercli.cpp.i
+.PHONY : zookeepercli.i
+
+# target to preprocess a source file
+zookeepercli.cpp.i:
+	cd /home/lth/learn/MyRPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/zookeepercli.cpp.i
+.PHONY : zookeepercli.cpp.i
+
+zookeepercli.s: zookeepercli.cpp.s
+.PHONY : zookeepercli.s
+
+# target to generate assembly for a file
+zookeepercli.cpp.s:
+	cd /home/lth/learn/MyRPC/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/zookeepercli.cpp.s
+.PHONY : zookeepercli.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -259,6 +331,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mprpc"
+	@echo "... logger.o"
+	@echo "... logger.i"
+	@echo "... logger.s"
 	@echo "... mprpcapplication.o"
 	@echo "... mprpcapplication.i"
 	@echo "... mprpcapplication.s"
@@ -268,12 +343,18 @@ help:
 	@echo "... mprpcconfig.o"
 	@echo "... mprpcconfig.i"
 	@echo "... mprpcconfig.s"
+	@echo "... mprpccontroller.o"
+	@echo "... mprpccontroller.i"
+	@echo "... mprpccontroller.s"
 	@echo "... rpcheader.pb.o"
 	@echo "... rpcheader.pb.i"
 	@echo "... rpcheader.pb.s"
 	@echo "... rpcprovider.o"
 	@echo "... rpcprovider.i"
 	@echo "... rpcprovider.s"
+	@echo "... zookeepercli.o"
+	@echo "... zookeepercli.i"
+	@echo "... zookeepercli.s"
 .PHONY : help
 
 

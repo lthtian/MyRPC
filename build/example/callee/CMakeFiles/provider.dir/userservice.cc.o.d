@@ -453,6 +453,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: \
  /usr/local/include/google/protobuf/stubs/callback.h \
  /home/lth/learn/MyRPC/src/include/mprpcapplication.h \
  /home/lth/learn/MyRPC/src/include/mprpcconfig.h \
+ /home/lth/learn/MyRPC/src/include/mprpcchannel.h \
+ /home/lth/learn/MyRPC/src/include/mprpccontroller.h \
  /home/lth/learn/MyRPC/src/include/rpcprovider.h \
  /usr/include/mymuduo/TcpServer.h /usr/include/mymuduo/EventLoop.h \
  /usr/include/mymuduo/UnCopyable.h /usr/include/mymuduo/Timestamp.h \
@@ -486,4 +488,6 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: \
  /usr/include/mymuduo/Callbacks.h /usr/include/mymuduo/TcpConnection.h \
  /usr/include/mymuduo/Buffer.h /usr/include/x86_64-linux-gnu/sys/uio.h \
  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
- /usr/include/mymuduo/Logger.h
+ /usr/include/mymuduo/Logger.h /home/lth/learn/MyRPC/src/include/logger.h \
+ /home/lth/learn/MyRPC/src/include/asyncqueue.h /usr/include/c++/13/queue \
+ /usr/include/c++/13/bits/stl_queue.h

@@ -4,7 +4,9 @@
 #include "../user.pb.h"
 #include "mprpcapplication.h"
 #include "rpcprovider.h"
+#include "logger.h"
 using namespace fixbug;
+using namespace mprpc;
 
 // UserServic原本是一个本地服务
 // 只要继承UserServiceRpc再重写两个虚函数就可以实现rpc服务
@@ -41,8 +43,12 @@ public:
 
 int main(int argc, char *argv[])
 {
+
     // 调用框架初始化操作
     MprpcApplication::Init(argc, argv);
+
+    log_info("first log message.");
+
     // 把UserService发布到rpc节点上
     RpcProvider provider;
     provider.NotifyService(new UserService());

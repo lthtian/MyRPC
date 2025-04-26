@@ -1,7 +1,7 @@
 #include <iostream>
 #include "mprpcapplication.h"
 #include "user.pb.h"
-#include "mprpcchannel.h"
+
 using std::cout;
 using std::endl;
 
@@ -18,8 +18,16 @@ int main(int argc, char **argv)
     request.set_pwd("123456");
     fixbug::LoginResponse response;
 
-    stub.Login(nullptr, &request, &response, nullptr);
+    MprpcController controller;
 
+    stub.Login(&controller, &request, &response, nullptr);
+
+    // 如果rpc服务确实成功再继续接下来的内容
+    if (controller.Failed())
+    {
+        std::cout << controller.ErrorText() << endl;
+        return 0;
+    }
     // rpc方法调用完成, 读响应
     if (response.result().errcode() == 0)
     {

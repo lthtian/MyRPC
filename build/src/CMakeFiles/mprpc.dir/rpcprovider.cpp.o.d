@@ -462,17 +462,25 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cpp.o: \
  /usr/local/include/google/protobuf/wire_format_lite.h \
  /home/lth/learn/MyRPC/src/include/mprpcapplication.h \
  /home/lth/learn/MyRPC/src/include/mprpcconfig.h \
- /home/lth/learn/MyRPC/src/rpcheader.pb.h \
- /usr/local/include/google/protobuf/runtime_version.h \
+ /home/lth/learn/MyRPC/src/include/mprpcchannel.h \
+ /usr/local/include/google/protobuf/message.h \
+ /usr/local/include/google/protobuf/generated_message_reflection.h \
+ /usr/local/include/google/protobuf/generated_enum_reflection.h \
+ /usr/local/include/google/protobuf/unknown_field_set.h \
+ /usr/local/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
  /usr/local/include/google/protobuf/generated_message_tctable_decl.h \
  /usr/local/include/google/protobuf/generated_message_util.h \
  /usr/local/include/google/protobuf/any.h \
  /usr/local/include/google/protobuf/has_bits.h \
  /usr/local/include/google/protobuf/implicit_weak_message.h \
- /usr/local/include/google/protobuf/generated_message_reflection.h \
- /usr/local/include/google/protobuf/generated_enum_reflection.h \
- /usr/local/include/google/protobuf/unknown_field_set.h \
- /usr/local/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
- /usr/local/include/google/protobuf/message.h \
  /usr/local/include/google/protobuf/map.h \
- /usr/local/include/google/protobuf/reflection.h
+ /usr/local/include/google/protobuf/reflection.h \
+ /home/lth/learn/MyRPC/src/include/mprpccontroller.h \
+ /home/lth/learn/MyRPC/src/rpcheader.pb.h \
+ /usr/local/include/google/protobuf/runtime_version.h \
+ /home/lth/learn/MyRPC/src/include/zookeepercli.h \
+ /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /usr/include/zookeeper/zookeeper.h /usr/include/zookeeper/proto.h \
+ /usr/include/zookeeper/zookeeper_version.h \
+ /usr/include/zookeeper/recordio.h \
+ /usr/include/zookeeper/zookeeper.jute.h

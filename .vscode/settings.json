@@ -72,5 +72,21 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "*.inc": "cpp"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment",
+                    "comment.line.double-slash",
+                    "comment.block.documentation",
+                    "punctuation.definition.comment"
+                ],
+                "settings": {
+                    "foreground": "#FFCC66",
+                    "fontStyle": "italic"
+                }
+            }
+        ]
     }
 }

@@ -7,15 +7,15 @@
 },
 {
   "directory": "/home/lth/learn/MyRPC/build/src",
-  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/mprpcchannel.cpp.o -c /home/lth/learn/MyRPC/src/mprpcchannel.cpp",
-  "file": "/home/lth/learn/MyRPC/src/mprpcchannel.cpp",
-  "output": "src/CMakeFiles/mprpc.dir/mprpcchannel.cpp.o"
-},
-{
-  "directory": "/home/lth/learn/MyRPC/build/src",
   "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/mprpcconfig.cpp.o -c /home/lth/learn/MyRPC/src/mprpcconfig.cpp",
   "file": "/home/lth/learn/MyRPC/src/mprpcconfig.cpp",
   "output": "src/CMakeFiles/mprpc.dir/mprpcconfig.cpp.o"
+},
+{
+  "directory": "/home/lth/learn/MyRPC/build/src",
+  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/rpcprovider.cpp.o -c /home/lth/learn/MyRPC/src/rpcprovider.cpp",
+  "file": "/home/lth/learn/MyRPC/src/rpcprovider.cpp",
+  "output": "src/CMakeFiles/mprpc.dir/rpcprovider.cpp.o"
 },
 {
   "directory": "/home/lth/learn/MyRPC/build/src",
@@ -25,9 +25,27 @@
 },
 {
   "directory": "/home/lth/learn/MyRPC/build/src",
-  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/rpcprovider.cpp.o -c /home/lth/learn/MyRPC/src/rpcprovider.cpp",
-  "file": "/home/lth/learn/MyRPC/src/rpcprovider.cpp",
-  "output": "src/CMakeFiles/mprpc.dir/rpcprovider.cpp.o"
+  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/mprpcchannel.cpp.o -c /home/lth/learn/MyRPC/src/mprpcchannel.cpp",
+  "file": "/home/lth/learn/MyRPC/src/mprpcchannel.cpp",
+  "output": "src/CMakeFiles/mprpc.dir/mprpcchannel.cpp.o"
+},
+{
+  "directory": "/home/lth/learn/MyRPC/build/src",
+  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/mprpccontroller.cpp.o -c /home/lth/learn/MyRPC/src/mprpccontroller.cpp",
+  "file": "/home/lth/learn/MyRPC/src/mprpccontroller.cpp",
+  "output": "src/CMakeFiles/mprpc.dir/mprpccontroller.cpp.o"
+},
+{
+  "directory": "/home/lth/learn/MyRPC/build/src",
+  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/logger.cpp.o -c /home/lth/learn/MyRPC/src/logger.cpp",
+  "file": "/home/lth/learn/MyRPC/src/logger.cpp",
+  "output": "src/CMakeFiles/mprpc.dir/logger.cpp.o"
+},
+{
+  "directory": "/home/lth/learn/MyRPC/build/src",
+  "command": "/usr/bin/g++ -DNOMINMAX -I/home/lth/learn/MyRPC/src/include -I/home/lth/learn/MyRPC/example -g -o CMakeFiles/mprpc.dir/zookeepercli.cpp.o -c /home/lth/learn/MyRPC/src/zookeepercli.cpp",
+  "file": "/home/lth/learn/MyRPC/src/zookeepercli.cpp",
+  "output": "src/CMakeFiles/mprpc.dir/zookeepercli.cpp.o"
 },
 {
   "directory": "/home/lth/learn/MyRPC/build/example/callee",

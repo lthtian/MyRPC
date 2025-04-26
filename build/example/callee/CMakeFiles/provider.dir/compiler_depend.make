@@ -538,8 +538,12 @@ example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o: /home/lth/learn/MyRPC/ex
 
 example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/lth/learn/MyRPC/example/callee/userservice.cc \
   /home/lth/learn/MyRPC/example/user.pb.h \
+  /home/lth/learn/MyRPC/src/include/asyncqueue.h \
+  /home/lth/learn/MyRPC/src/include/logger.h \
   /home/lth/learn/MyRPC/src/include/mprpcapplication.h \
+  /home/lth/learn/MyRPC/src/include/mprpcchannel.h \
   /home/lth/learn/MyRPC/src/include/mprpcconfig.h \
+  /home/lth/learn/MyRPC/src/include/mprpccontroller.h \
   /home/lth/learn/MyRPC/src/include/rpcprovider.h \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \
@@ -648,6 +652,7 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/lth/learn/MyRPC/e
   /usr/include/c++/13/bits/stl_multiset.h \
   /usr/include/c++/13/bits/stl_numeric.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_queue.h \
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
   /usr/include/c++/13/bits/stl_set.h \
@@ -726,6 +731,7 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/lth/learn/MyRPC/e
   /usr/include/c++/13/pstl/glue_memory_defs.h \
   /usr/include/c++/13/pstl/glue_numeric_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/queue \
   /usr/include/c++/13/random \
   /usr/include/c++/13/ratio \
   /usr/include/c++/13/set \
@@ -1166,9 +1172,21 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/lth/learn/MyRPC/e
 
 /usr/include/c++/13/mutex:
 
+/usr/include/c++/13/bits/stl_queue.h:
+
 /usr/include/c++/13/bits/std_thread.h:
 
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/asm-generic/bitsperlong.h:
+
+/usr/include/arpa/inet.h:
+
+/home/lth/learn/MyRPC/src/include/rpcprovider.h:
+
 /usr/local/include/google/protobuf/wire_format_lite.h:
+
+/home/lth/learn/MyRPC/src/include/mprpccontroller.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
@@ -1504,6 +1522,8 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/lth/learn/MyRPC/e
 
 /usr/include/c++/13/bits/std_function.h:
 
+/usr/include/c++/13/queue:
+
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
 
 /usr/include/c++/13/optional:
@@ -1679,8 +1699,6 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/lth/learn/MyRPC/e
 /usr/include/libintl.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/local/include/google/protobuf/raw_ptr.h:
 
 /usr/include/c++/13/bits/shared_ptr.h:
 
@@ -1876,10 +1894,6 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/lth/learn/MyRPC/e
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
-
-/usr/local/include/absl/strings/internal/string_constant.h:
-
 /usr/include/c++/13/bits/list.tcc:
 
 /usr/include/features-time64.h:
@@ -1889,8 +1903,6 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/lth/learn/MyRPC/e
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-/usr/include/asm-generic/bitsperlong.h:
 
 /usr/include/c++/13/ios:
 
@@ -2272,12 +2284,18 @@ example/callee/CMakeFiles/provider.dir/userservice.cc.o: /home/lth/learn/MyRPC/e
 
 /home/lth/learn/MyRPC/example/callee/userservice.cc:
 
+/home/lth/learn/MyRPC/src/include/asyncqueue.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/local/include/absl/strings/internal/string_constant.h:
+
+/home/lth/learn/MyRPC/src/include/logger.h:
+
 /usr/local/include/google/protobuf/stubs/callback.h:
 
 /home/lth/learn/MyRPC/src/include/mprpcapplication.h:
 
-/home/lth/learn/MyRPC/src/include/rpcprovider.h:
+/usr/local/include/google/protobuf/raw_ptr.h:
 
-/usr/include/arpa/inet.h:
-
-/usr/include/asm-generic/posix_types.h:
+/home/lth/learn/MyRPC/src/include/mprpcchannel.h:

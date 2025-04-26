@@ -445,6 +445,10 @@ src/CMakeFiles/mprpc.dir/mprpcchannel.cpp.o: \
  /usr/local/include/google/protobuf/runtime_version.h \
  /home/lth/learn/MyRPC/src/include/mprpcapplication.h \
  /home/lth/learn/MyRPC/src/include/mprpcconfig.h \
+ /home/lth/learn/MyRPC/src/include/mprpccontroller.h \
+ /home/lth/learn/MyRPC/src/include/zookeepercli.h \
+ /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /usr/include/zookeeper/zookeeper.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/socket.h \
@@ -461,6 +465,9 @@ src/CMakeFiles/mprpc.dir/mprpcchannel.cpp.o: \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
- /usr/include/error.h /usr/include/x86_64-linux-gnu/bits/error.h \
- /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/bits/in.h \
- /usr/include/arpa/inet.h
+ /usr/include/zookeeper/proto.h \
+ /usr/include/zookeeper/zookeeper_version.h \
+ /usr/include/zookeeper/recordio.h \
+ /usr/include/zookeeper/zookeeper.jute.h /usr/include/error.h \
+ /usr/include/x86_64-linux-gnu/bits/error.h /usr/include/netinet/in.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/arpa/inet.h

@@ -1,6 +1,7 @@
 #include "mprpcchannel.h"
 #include "rpcheader.pb.h"
 #include "mprpcapplication.h"
+#include "zookeepercli.h"
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -8,6 +9,7 @@
 #include <unistd.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <string>
 
 using std::cout;
 using std::endl;
@@ -29,7 +31,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     }
     else
     {
-        cout << "serialize request error!" << endl;
+        controller->SetFailed("serialize request error!");
         return;
     }
 
@@ -46,7 +48,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     }
     else
     {
-        cout << "serialize header error" << endl;
+        controller->SetFailed("serialize header error");
         return;
     }
 
@@ -58,12 +60,30 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     int clientfd = socket(AF_INET, SOCK_STREAM, 0);
     if (clientfd == -1)
     {
-        cout << "create socket error!" << endl;
+        controller->SetFailed("create socket error!");
         exit(EXIT_FAILURE);
     }
 
-    std::string ip = MprpcApplication::GetInstance().getConfig().Load("rpcserverip");
-    std::string port = MprpcApplication::GetInstance().getConfig().Load("rpcserverport");
+    // 最普通就是直接从配置文件中读取rpcserver的消息
+    // std::string ip = MprpcApplication::GetInstance().getConfig().Load("rpcserverip");
+    // std::string port = MprpcApplication::GetInstance().getConfig().Load("rpcserverport");
+
+    // 还可以通过服务名和方法名从zookeeper上查询
+    ZkClient zkCli;
+    zkCli.start();
+
+    std::string path = "/" + service_name + "/" + method_name;
+    std::string data = zkCli.getData(path.c_str());
+    if (data == "")
+    {
+        std::string str = "no method found in path: " + path;
+        controller->SetFailed(str);
+        return;
+    }
+
+    int idx = data.find_first_of(":");
+    std::string ip = data.substr(0, idx);
+    std::string port = data.substr(idx + 1);
 
     struct sockaddr_in server_addr;
     bzero(&server_addr, sizeof(server_addr));
@@ -73,14 +93,15 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
 
     if (-1 == connect(clientfd, (struct sockaddr *)&server_addr, sizeof(server_addr)))
     {
-        cout << "connection error! errno:" << errno << " errmsg:" << strerror(errno) << endl;
+        std::string str = "connection error! errno:" + std::to_string(errno) + " errmsg:" + strerror(errno);
+        controller->SetFailed(str);
         close(clientfd);
         exit(EXIT_FAILURE);
     }
 
     if (-1 == send(clientfd, send_rpc_str.c_str(), send_rpc_str.size(), 0))
     {
-        cout << "send error" << endl;
+        controller->SetFailed("send error");
         close(clientfd);
         return;
     }
@@ -90,14 +111,14 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor *method,
     int n = recv(clientfd, buf, 1024, 0);
     if (-1 == n)
     {
-        cout << "receive error" << endl;
+        controller->SetFailed("receive error");
         close(clientfd);
         return;
     }
 
     if (!response->ParseFromArray(buf, n))
     {
-        cout << "parse error!" << endl;
+        controller->SetFailed("parse error!");
         close(clientfd);
         return;
     }
